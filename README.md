@@ -1,0 +1,2 @@
+# FlexVerse
+FlixVerse is a modern movie and TV series discovery platform where users can explore movies, web series, trailers, actors, cast details, genres, ratings, and release dates. Built with a clean and responsive interface, FlixVerse makes discovering entertainment simple, engaging, and enjoyable.
