@@ -47,6 +47,7 @@ function Contact() {
           </div>
 
         </div>
+        <p className='text-zinc-200 text-center absolute bottom-0 left-[50%] translate-x-[-50%]'> &copy; 2026 Your Brand Name. All Rights Reserved </p>
 
 
       </div>
