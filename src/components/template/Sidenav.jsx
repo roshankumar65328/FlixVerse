@@ -8,10 +8,10 @@ function Sidenav() {
 
 
   return (
-        <div className='w-[20%] h-screen top-0 border-r-2 border-zinc-200 px-[2%] fixed top-0 left-0'>
-            <div className='text-[1vw] font-bold flex items-center mt-[0.5vw]'>
+        <div className='w-[20%] h-[100vh] top-0 border-r-2 border-zinc-200 px-[2%] fixed top-0 left-0'>
+            <div className='text-[1vw] h-[10vh] font-bold flex items-center mt-[0.5vw]'>
                 <Link to='/'> <img src={logo} className='w-[8vw]' alt="" /> </Link>
-                <span className='text-[1.6vw] '>Moviee</span>
+                <span className='text-[1.6vw] '> FlixVerse </span>
             </div>
 
             <nav className='h-[70vh] flex flex-col gap-[0.2vw] text-[1.3vw] leading-none '>
@@ -25,7 +25,7 @@ function Sidenav() {
 
             {/* <hr className='border-none h-[1px] bg-zinc-100 mt-1' /> */}
 
-            <nav className='flex flex-col  relative gap-[0.2vw] text-[1.3vw] leading-none '>
+            <nav className='flex flex-col h-[10vh] relative gap-[0.2vw] text-[1.3vw] leading-none '>
                 <h1 className='font-semibold text-xl  text-[1.6vw] mt-[1vh]'>Website Information</h1>
                 <Link to='/contact' className='p-[0.5vw] hover:bg-[#6556CD] hover:duration-300 rounded-lg'> <i className="ri-phone-line"></i> Contact</Link>
                 <Link to='/about' className='p-[0.5vw] hover:bg-[#6556CD] hover:duration-300 rounded-lg'> <i className="ri-info-i"></i> About</Link>
