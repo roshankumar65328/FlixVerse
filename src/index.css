@@ -297,6 +297,8 @@ select::-ms-expand{
       height: 35vh;
       margin-bottom: 5vw;
       margin: auto;
+      object-fit: contain;
+
     }
     .poster-and-details{
       width: 90vw;
@@ -401,6 +403,7 @@ select::-ms-expand{
       height: 35vh;
       margin-bottom: 5vw;
       margin: auto;
+      object-fit: contain;
     }
     .poster-and-details{
       width: 90vw;
@@ -483,6 +486,68 @@ select::-ms-expand{
     .people .people-head{
       width: 100vw;
     }
+
+    .person-details nav{
+      font-size: 4vw;
+    }
+    .person-left{
+      width: 30vw;
+    }
+    .person-left img{
+      width: 100%;
+    }
+    .person-link i{
+      font-size: 5vw;
+    }
+    .person-details h1{
+      font-size: 3.5vw;
+    }
+    .person-details h1:nth-child(odd){
+      margin-top: 2vw;
+    }
+    .person-right .person-name{
+      font-size: 7vw;
+    }
+
+    .person-right{
+      width: 70vw;
+    }
+    .person-right .worked-for-title{
+      position: relative;
+      left: -45% !important;
+      margin-top: 5vw;
+      font-size: 5vw;
+      width: 100vw;
+    }
+    .person-right .worked-for{
+      position: relative;
+      left: -50% !important;
+      width: 100vw;
+    }
+    .person-bottom-info h1{
+      font-size: 4vw;
+      color: white;
+      padding-left: 2vw;
+    }
+    .person-right .dropdown-title{
+      position: relative;
+      top: 8vw;
+    }
+    .person-bottom-info{
+      position: relative;
+      left: -50%;
+    }
+    .list-disc{
+      position: relative;
+      left: -45%;
+      width: 90vw;
+      margin-bottom: 4vw;
+    }
+    .list-disc span{
+      font-size: 3vw;
+      opacity: 0.9;
+    }
+
 
 
 }
