@@ -151,7 +151,7 @@ function MovieDetails() {
       <div className=''>
         <h1 className='text-[2vw] px-[1vw] mt-[4vw] mb-[1vw]'>Seasons</h1>
         <div className='w-[100%] gap-[0.8vw] flex overflow-x-auto bg-[#1F1E24] overflow-y-hidden'>
-          {info.detail.seasons.length >0  ? info.detail.seasons.slice(1,).map((s,i)=>(
+          {info.detail.seasons.length >0  ? info.detail.seasons.slice(0,).map((s,i)=>(
             <div className='min-w-[20%]  h-[52vh] px-[1vw] py-[1vw]  bg-zinc-800'>
               <img className='h-[40vh] min-w-[16vw] mb-[0.8vw]' src={`https://image.tmdb.org/t/p/w500${
                 info.detail.poster_path

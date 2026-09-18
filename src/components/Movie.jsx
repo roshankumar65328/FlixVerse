@@ -62,15 +62,17 @@ function Movie() {
 
 
   return movie.length > 0  ? (
-    <div className='w-screen h-screen '>
-        <div className='w-[100vw] h-[10vh] flex items-center'>
-            <h1 className='w-[15vw] text-[2vw] flex gap-[1vw] px-[5%]'>
-                <i onClick={()=> Navigate(-1)} className="ri-arrow-left-line "></i>  Movies
+    <div className='movie w-screen h-screen '>
+        <div className='nav w-[100vw] h-[10vh] flex items-center'>
+            <h1 className='movie-title w-[15vw] text-[2vw] flex gap-[1vw] px-[5%]'>
+                <i onClick={()=> Navigate(-1)} className="search-icon ri-arrow-left-line"></i>  Movies
             </h1>
 
             <Topnav />
 
-            <Dropdown title='Category' options={['popular', 'top_rated', 'upcoming', 'now_playing']} func={(e)=> setCategory(e.target.value)} />
+            <div className='dropdown-title relative '>
+                <Dropdown title='Category' options={['popular', 'top_rated', 'upcoming', 'now_playing']} func={(e)=> setCategory(e.target.value)} />
+            </div>
 
         </div>
 

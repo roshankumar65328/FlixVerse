@@ -59,8 +59,8 @@ function People() {
 
 
   return person.length > 0  ? (
-    <div className='w-screen h-screen '>
-        <div className='w-[90vw] mx-auto h-[10vh] flex items-center'>
+    <div className='people w-screen h-screen '>
+        <div className='people-head w-[90vw] mx-auto h-[10vh] flex items-center'>
             <h1 className='text-[2vw] flex gap-[1vw]'>
                 <i onClick={()=> Navigate(-1)} className="ri-arrow-left-line"></i>  Peoples
             </h1>

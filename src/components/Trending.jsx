@@ -26,7 +26,7 @@ function Trending() {
                 setTrending((prevState)=>[...prevState, ...data.results])
                 setPage(page + 1);
             }else{
-                setHasMore(false)
+                setHasMore(false)   // Yahan false kar dete hain taaki scroll rukh jaye
             }
 
 
@@ -55,16 +55,18 @@ function Trending() {
     },[category, duration]);
 
   return trending.length > 0  ? (
-    <div className='w-screen h-screen '>
-        <div className='w-[90vw] mx-auto h-[10vh] flex items-center'>
+    <div className='trending w-screen h-screen '>
+        <div className='trending-head w-[90vw] mx-auto h-[10vh] flex items-center'>
             <h1 className='text-[2vw] flex gap-[1vw]'>
                 <i onClick={()=> navigate(-1)} className="ri-arrow-left-line"></i>  Trending
             </h1>
 
             <Topnav />
 
-            <Dropdown title='Category' options={['all', 'movie', 'tv']} func={(e)=> setCategory(e.target.value)} />
-            <Dropdown title='Duration' options={['week', 'day']} func={(e)=> setDuration(e.target.value)} />
+            <div className='dropdown-title flex'>
+                <Dropdown title='Category' options={['all', 'movie', 'tv']} func={(e)=> setCategory(e.target.value)} />
+                <Dropdown title='Duration' options={['week', 'day']} func={(e)=> setDuration(e.target.value)} />
+            </div>
 
         </div>
 

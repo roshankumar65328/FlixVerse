@@ -59,8 +59,8 @@ function Tvshows() {
 
 
   return tv.length > 0  ? (
-    <div className='w-screen h-screen '>
-        <div className='w-[100vw] h-[10vh] flex items-center'>
+    <div className='tvshow w-screen h-screen '>
+        <div className='tvshow-head w-[100vw] h-[10vh] flex items-center'>
             <h1 className='w-[20vw] text-[2vw] flex gap-[1vw] px-[5%]'>
                 <i onClick={()=> Navigate(-1)} className="ri-arrow-left-line"></i>  Tv
             </h1>
@@ -69,7 +69,7 @@ function Tvshows() {
                 <Topnav />
             </div>
 
-            <div className='w-[20vw]'>
+            <div className='dropdown-title w-[20vw]'>
                 <Dropdown title='Category' options={['on_the_air', 'popular', 'top_rated', 'airing_today']} func={(e)=> setCategory(e.target.value)} />
             </div>
 

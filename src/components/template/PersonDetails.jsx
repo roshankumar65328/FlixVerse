@@ -93,7 +93,7 @@ function PersonDetails() {
             <li className='hover:text-white px-[2.5vw] py-[1.4vw] duration-300 cursor-pointer' key={i}> 
               <Link to={`/${category}/details/${c.id}`} className='flex flex-col'>
                 <span> {c.name || c.original_name || c.original_title}</span>
-                <span>{c.character &&  `character.name: ${c.character}`}</span>
+                <span>{c.character &&  `Character Name: ${c.character}`}</span>
               </Link> 
             </li>
             ))}

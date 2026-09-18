@@ -31,7 +31,7 @@ function MovieDetails() {
       backgroundSize: "cover",
       backgroundRepeat: 'no-repeat'
     }}  
-    className='w-screen h-[100vh] px-[5%] overflow-auto relative'>
+    className='movie-details w-screen h-[100vh] px-[5%] overflow-auto relative'>
 
       {/* part-1 - navigation */}
       <nav className='w-full h-[10vh] text-[1.5vw] flex items-center gap-[3vw]'>
@@ -42,16 +42,16 @@ function MovieDetails() {
       </nav>
 
         {/* part-2 - poster and available on platform*/}
-      <div className='flex w-full '>
-        <div className='w-[25vw]  h-fit'>
+      <div className='movie-details-bottom flex w-full '>
+        <div className='poster-and-details w-[25vw]  h-fit'>
           <div>
-            <img className='h-[50vh] w-fit mb-[0.6vw] mt-[2vw] shadow-[6px_14px_2px_rgba(0,0,0,0.5)]' src={`https://image.tmdb.org/t/p/w500${
+            <img className='poster h-[50vh] w-fit mb-[0.6vw] mt-[2vw] shadow-[6px_14px_2px_rgba(0,0,0,0.5)]' src={`https://image.tmdb.org/t/p/w500${
               info.detail.poster_path || info.detail.backdrop_path
                 }`} 
                 alt="" 
             />
 
-            <div className='w-full  mt-[2vw]'>
+            <div className='watchproviders w-full  mt-[2vw]'>
               <div className='mt-[1vw]'>
                   {info.watchproviders && info.watchproviders.flatrate &&
                     (
@@ -95,8 +95,8 @@ function MovieDetails() {
         </div>
 
         {/* part-3 - details */}
-        <div className='w-[75vw] h-fit content  '>
-          <h1 className='text-[4.5vw] font-bold leading-[6vw]'> {info.detail.name || info.detail.title || info.detail.original || info.detail.original_title} 
+        <div className='poster-details w-[75vw] h-fit content  '>
+          <h1 className='poster-name text-[4.5vw] font-bold leading-[6vw]'> {info.detail.name || info.detail.title || info.detail.original || info.detail.original_title} 
             <small className='text-[2vw] text-zinc-300 mx-[1vw]'>({info.detail.release_date.split("-")[0]})</small>
           </h1>
 
@@ -118,32 +118,32 @@ function MovieDetails() {
               {info.detail.tagline}
             </h1>
 
-            <h1>
-              {info.detail.vote_average && <div className=' text-black text-[1vw] w-[14vh] h-[5.5vh] flex items-center justify-center rounded-full bg-yellow-300 hover:bg-[#6556CD] font-black  '>  {`Rating` +(info.detail.vote_average ).toFixed(1)}  </div>}
+            <h1 className=''>
+              {info.detail.vote_average && <div className='rating-btn text-black text-[1vw] w-[14vh] h-[5.5vh] flex items-center justify-center rounded-full bg-yellow-300 hover:bg-[#6556CD] font-black  '>  {`Rating ` +(info.detail.vote_average ).toFixed(1)}  </div>}
             </h1>
           </div>
 
-          <div className='mt-[1vw]'>
+          <div className='overview poster-text mt-[1vw]'>
             <h1 className='text-[2vw] font-semibold '>Overview</h1>
             <p className='text-[1.2vw] leading-[1.3]'>
               {info.detail.overview}
             </p>
           </div>
 
-          <div className='mt-[1vw] '>
+          <div className='translation poster-text mt-[1vw] '>
             <h1 className='text-[2vw] font-semibold '>Translations</h1>
             <p className='text-[1vw] leading-[1.3]'>
               {info.translations.join(",")}
             </p>
           </div>
 
-          { <Link to={`${pathname}/trailer`} className='text-[1.2vw] bg-[#6556CD] px-[1.5vw] py-[0.7vw] rounded-full relative top-[2vw] '> <i className="ri-play-fill"></i> Play Trailer</Link>}
+          { <Link to={`${pathname}/trailer`} className='trailer-btn text-[1.2vw] bg-[#6556CD] px-[1.5vw] py-[0.7vw] rounded-full relative top-[2vw] '> <i className="ri-play-fill"></i> Play Trailer</Link>}
 
         </div>
       </div>
 
       {/* part-4 - recommendation and similarity */}
-      <h1 className='text-[2vw] px-[1vw] mt-[4vw] mb-[1vw]'>Recommendations</h1>
+      <h1 className='recommendation text-[2vw] px-[1vw] mt-[4vw] mb-[1vw]'>Recommendations</h1>
       <HorizontalCards data={info.recommendations ? info.recommendations.results : info.similar.results} />
       <Outlet />   {/* trailer ko chalane ke liye Outlet likha hai*/}
 

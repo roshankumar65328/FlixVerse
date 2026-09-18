@@ -30,8 +30,8 @@ function Topnav() {
     
 
   return (
-    <div className='w-[75vw] h-[8vh] relative flex items-center justify-start pl-[20%]'>
-        <i className="text-zinc-400 text-2xl ri-search-line"></i>
+    <div className='topnav w-[75vw] h-[8vh] relative flex items-center justify-start pl-[20%]'>
+        <i className="search text-zinc-400 text-2xl ri-search-line"></i>
         <input 
         onChange={(e)=>{setQuery(e.target.value)}}
         value={query}
@@ -42,7 +42,7 @@ function Topnav() {
             onClick={()=>setQuery("")}  className="text-zinc-400 text-3xl ri-close-line"
         ></i>}
 
-        <div className='absolute z-[999] w-[50%] max-h-[50vh] bg-zinc-200  top-[100%] overflow-auto rounded'>
+        <div className='search-result absolute z-[999] w-[50%] max-h-[50vh] bg-zinc-200  top-[100%] overflow-auto rounded'>
 
             {searches && searches.map((s, i)=>{
             return <Link to={`/${s.media_type}/details/${s.id}`} key={i} className='text-zinc-600 bg-blue-200 w-full i p-[0.8vw] hover:text-black hover:bg-blue-300 duration-500 border-b-2 border-zinc-100 items-center flex items-center gap-x-[5vw]'>

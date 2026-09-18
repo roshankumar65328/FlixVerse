@@ -59,15 +59,17 @@ function Popular() {
 
 
   return popular.length > 0  ? (
-    <div className='w-screen h-screen '>
-        <div className='w-[90vw] mx-auto h-[10vh] flex items-center'>
+    <div className='popular w-screen h-screen '>
+        <div className='popular-head w-[90vw] mx-auto h-[10vh] flex items-center'>
             <h1 className='text-[2vw] flex gap-[1vw]'>
                 <i onClick={()=> Navigate(-1)} className="ri-arrow-left-line"></i>  Popular
             </h1>
 
             <Topnav />
 
-            <Dropdown title='Category' options={['movie', 'tv']} func={(e)=> setCategory(e.target.value)} />
+            <div className='dropdown-title'>
+                <Dropdown title='Category' options={['movie', 'tv']} func={(e)=> setCategory(e.target.value)} />
+            </div>
 
         </div>
 
