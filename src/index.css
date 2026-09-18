@@ -304,6 +304,7 @@ select::-ms-expand{
     .poster-details .poster-name{
       font-size: 10vw;
       padding: 2vw 0vw;
+      line-height: 11vw;
     }
     .movie-details .watchproviders{
       padding-top: 3vw;
@@ -385,6 +386,94 @@ select::-ms-expand{
       padding-left: 1vw;
       top: -1vw;
     }
+
+    .tvshow-details nav{
+      font-size: 4vw;
+    }
+    .tvshow-details-bottom{
+      display: flex;
+      flex-direction: column;
+      width: 85vw;
+    }
+    .tvshow-details-bottom .poster{
+      width:80vw;
+      margin-top: -6vw;
+      height: 35vh;
+      margin-bottom: 5vw;
+      margin: auto;
+    }
+    .poster-and-details{
+      width: 90vw;
+    }
+    .poster-details .poster-name{
+      font-size: 10vw;
+      padding: 2vw 0vw;
+    }
+    .tvshow-details .watchproviders{
+      padding-top: 3vw;
+      padding-bottom: 3vw;
+    }
+    .tvshow-details .watchproviders h1{
+      font-size: 4vw;
+      padding-right: 2vw;
+      padding-top: ;
+    }
+    .poster-details h1{
+      font-size: 3vw;
+    }
+    .poster-details .rating-btn{
+      font-size: 3vw;
+      width: 20vw;
+      height: 8vw;
+    }
+    .poster-text h1{
+      font-size: 5vw;
+    }
+    .poster-text p{
+      font-size: 2.5vw;
+    }
+    .overview h1{
+      font-size: 5vw;
+    }
+    .overview p{
+      width: 80vw !important;
+      overflow: hidden;
+      font-size: 2.5vw;
+    }
+    .translation h1{
+      font-size: 5vw;
+    }
+    .translation p{
+      width: 80vw !important;
+      overflow: hidden;
+      font-size: 2.5vw;
+    }
+    .trailer-btn{
+      font-size: 3vw;
+      padding: 2vw 4vw;
+    }
+    .season-title{
+      font-size: 6vw;
+      margin-top: 5vw;
+    }
+    .season-card{
+      min-width: 38vw;
+      height: 65vw;
+    }
+    .season-card img{
+      width: 100%;
+      height: 90%;
+    }
+    .season-card h1{
+      font-size: 4vw;
+    }
+    .recommendation{
+      font-size: 7vw;
+      margin-top: 5vw;
+    }
+
+
+
 
 
     .people h1{

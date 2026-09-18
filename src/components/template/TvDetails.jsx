@@ -33,7 +33,7 @@ function MovieDetails() {
       backgroundSize: "cover",
       backgroundRepeat: 'no-repeat'
     }}  
-    className='w-screen h-[100vh] px-[5%] overflow-auto relative pb-[1vw]'>
+    className='tvshow-details w-screen h-[100vh] px-[5%] overflow-auto relative pb-[1vw]'>
 
       {/* part-1 - navigation */}
       <nav className='w-full h-[10vh] text-[1.5vw] flex items-center gap-[3vw]'>
@@ -43,17 +43,17 @@ function MovieDetails() {
         <a target="_blank" href={`https://www.imdb.com/title/${info.externalid.imdb_id}/`}> imdb </a>
       </nav>
 
-      <div className='flex w-full '>
+      <div className='tvshow-details-bottom flex w-full '>
         {/* part-2 - poster and available on platform*/}
-        <div className='w-[25vw]  h-fit'>
+        <div className='poster-and-details w-[25vw]  h-fit'>
           <div>
-            <img className='h-[50vh] w-fit mb-[0.6vw] mt-[2vw] shadow-[6px_14px_2px_rgba(0,0,0,0.5)]' src={`https://image.tmdb.org/t/p/w500${
+            <img className='poster h-[50vh] w-fit mb-[0.6vw] mt-[2vw] shadow-[6px_14px_2px_rgba(0,0,0,0.5)]' src={`https://image.tmdb.org/t/p/w500${
               info.detail.poster_path || info.detail.backdrop_path
                 }`} 
                 alt="" 
             />
 
-            <div className='w-full  mt-[2vw]'>
+            <div className='watchproviders w-full  mt-[2vw]'>
               <div className='mt-[1vw]'>
                   {info.watchproviders && info.watchproviders.flatrate &&
                     (
@@ -97,8 +97,8 @@ function MovieDetails() {
         </div>
 
         {/* part-3 - details */}
-        <div className='w-[75vw] h-fit content  '>
-          <h1 className='text-[4.5vw] font-bold leading-[6vw]'> {info.detail.name || info.detail.title || info.detail.original || info.detail.original_title} 
+        <div className='poster-details w-[75vw] h-fit content  '>
+          <h1 className='poster-name text-[4.5vw] font-bold leading-[6vw]'> {info.detail.name || info.detail.title || info.detail.original || info.detail.original_title} 
             <small className='text-[2vw] text-zinc-300 mx-[1vw]'>({info.detail.first_air_date.split("-")[0]})</small>
           </h1>
 
@@ -124,35 +124,35 @@ function MovieDetails() {
             </h1>
 
             <h1>
-              {info.detail.vote_average && <div className=' text-black text-[1vw] w-[14vh] h-[5.5vh] flex items-center justify-center rounded-full bg-yellow-300 hover:bg-[#6556CD] font-black  '>  {`Rating ` +(info.detail.vote_average ).toFixed(1)}  </div>}
+              {info.detail.vote_average && <div className='rating-btn text-black text-[1vw] w-[14vh] h-[5.5vh] flex items-center justify-center rounded-full bg-yellow-300 hover:bg-[#6556CD] font-black  '>  {`Rating ` +(info.detail.vote_average ).toFixed(1)}  </div>}
             </h1>
           </div>
 
-          <div className='mt-[1vw]'>
+          <div className='overview mt-[1vw]'>
             <h1 className='text-[2vw] font-semibold '>Overview</h1>
             <p className='text-[1.2vw] leading-[1.3]'>
               {info.detail.overview}
             </p>
           </div>
 
-          <div className='mt-[1vw] '>
+          <div className='translation mt-[1vw] '>
             <h1 className='text-[2vw] font-semibold '>Translations</h1>
             <p className='text-[1vw] leading-[1.3]'>
               {info.translations.join(",")}
             </p>
           </div>
 
-          { <Link to={`${pathname}/trailer`} className='text-[1.2vw] bg-[#6556CD] px-[1.5vw] py-[0.7vw] rounded-full relative top-[2vw] '> <i className="ri-play-fill"></i> Play Trailer</Link>}
+          { <Link to={`${pathname}/trailer`} className='trailer-btn text-[1.2vw] bg-[#6556CD] px-[1.5vw] py-[0.7vw] rounded-full relative top-[2vw] '> <i className="ri-play-fill"></i> Play Trailer</Link>}
 
         </div>
       </div>
 
       {/* part-4 - seasons  */}
-      <div className=''>
-        <h1 className='text-[2vw] px-[1vw] mt-[4vw] mb-[1vw]'>Seasons</h1>
+      <div className='seasons'>
+        <h1 className='season-title text-[2vw] px-[1vw] mt-[4vw] mb-[1vw]'>Seasons</h1>
         <div className='w-[100%] gap-[0.8vw] flex overflow-x-auto bg-[#1F1E24] overflow-y-hidden'>
           {info.detail.seasons.length >0  ? info.detail.seasons.slice(0,).map((s,i)=>(
-            <div className='min-w-[20%]  h-[52vh] px-[1vw] py-[1vw]  bg-zinc-800'>
+            <div className='season-card min-w-[20%]  h-[52vh] px-[1vw] py-[1vw]  bg-zinc-800'>
               <img className='h-[40vh] min-w-[16vw] mb-[0.8vw]' src={`https://image.tmdb.org/t/p/w500${
                 info.detail.poster_path
               }`} 
@@ -166,7 +166,7 @@ function MovieDetails() {
       </div>
 
       {/* part-5 - recommendation and similarity */}
-      <h1 className='text-[2vw] px-[1vw] mt-[4vw] mb-[1vw]'>Recommendations</h1>
+      <h1 className='recommendation text-[2vw] px-[1vw] mt-[4vw] mb-[1vw]'>Recommendations</h1>
       <HorizontalCards data={info.recommendations ? info.recommendations.results : info.similar.results} />
       <Outlet />   {/* trailer ko chalane ke liye Outlet likha hai*/}
 
