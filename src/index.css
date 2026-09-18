@@ -550,6 +550,21 @@ select::-ms-expand{
 
 
 
+
+    .trailer-page{
+      width: 100vw;
+      height: 104vh;
+      position: fixed;
+      top: -56%;
+    }
+    .trailer-page i{
+
+      top: 8vw;
+      font-size: 5.5vw;
+    }
+
+
+
 }
 
 
