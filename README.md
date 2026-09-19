@@ -35,23 +35,22 @@ Follow these steps to run FlixVerse locally on your system:
 
 1. Clone the Repository
 
-git clone [https://github.com/your-username/FlixVerse.git](https://github.com/your-username/FlixVerse.git)
-cd FlixVerse
+   git clone https://github.com/roshankumar65328/FlixVerse.git
 
 
 2. Install Dependencies
 
-npm install
+   npm install
 
 3. Setup Environment Variables
-Create a .env file in the root directory and add your TMDB API Bearer Token / Key:
-Code snippet
+   Create a .env file in the root directory and add your TMDB API Bearer Token / Key:
+   Code snippet
 
-VITE_TMDB_API_KEY=your_tmdb_api_key_here
+   VITE_TMDB_API_KEY=your_tmdb_api_key_here
 
 4. Run Development Server
 
-npm run dev
+   npm run dev
 
 ---
 
@@ -86,5 +85,3 @@ FlixVerse/
 │   └── main.jsx
 ├── package.json
 └── README.md
-
----
