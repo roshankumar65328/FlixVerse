@@ -54,6 +54,10 @@ Follow these steps to run FlixVerse locally on your system:
 
 ---
 
+<img width="1919" height="863" alt="Screenshot 2026-09-19 172037" src="https://github.com/user-attachments/assets/ca21841c-6032-4c2b-a045-6ac9dfef281e" />
+
+---
+
 ## Project Structure
 
 ```text
