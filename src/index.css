@@ -152,6 +152,9 @@ select::-ms-expand{
     display: none;
 
   }
+  .sidenav .feeds{
+    height: 60vh;
+  }
 
   .web-info{
     height: 25vh;
