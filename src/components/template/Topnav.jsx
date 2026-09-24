@@ -51,7 +51,7 @@ function Topnav() {
                     s.backdrop_path || s.profile_path || s.poster_path ?
                     `https://image.tmdb.org/t/p/w500/${s.backdrop_path || s.profile_path || s.poster_path }` : noImage  } 
                 alt="" />
-                <span className='text-[1.2vw]'> {s.name || s.title || s.original_name || original_title} </span>
+                <span className='search-result-title text-[1.2vw]'> {s.name || s.title || s.original_name || original_title} </span>
             </Link>
 
             })}

@@ -195,6 +195,9 @@ select::-ms-expand{
     left: -1vw;
     width: 61vw;
   }
+  .search-result span {
+    font-size: 4vw;
+  }
 
 
   .header{
