@@ -35,7 +35,7 @@ function Topnav() {
         <input 
         onChange={(e)=>{setQuery(e.target.value)}}
         value={query}
-         className='border rounded w-[50%] mx-[1%]  text-[1.6vw]  border-none' type="text" placeholder='serach any movies, series, actors...' />
+         className='border rounded w-[50%] mx-[1%]  text-[1.6vw]  border-none' type="text" placeholder='search any movie, series, actors...' />
         
         {query.length > 0 && 
         <i 

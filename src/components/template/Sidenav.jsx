@@ -65,7 +65,7 @@ function Sidenav({ isOpen, setIsOpen }) {
                 <span className='title text-[1.6vw] text-white'> FlixVerse </span>
             </div>
 
-            <nav className='h-[60vh] flex flex-col gap-[0.2vw] text-[1.3vw] leading-none text-zinc-300'>
+            <nav className='h-[73vh] flex flex-col gap-[0.2vw] text-[1.3vw] leading-none text-zinc-300'>
                 <h1 className='font-semibold text-[1.6vw] my-[2vh] mb-[0.8vw] text-white'>New Feeds</h1>
                 <Link to='/trending' className='link p-[0.5vw] hover:bg-[#6556CD] hover:text-white hover:duration-300 rounded-lg'> <i className="ri-fire-fill"></i> Trendings</Link>
                 <Link to='/popular' className='link p-[0.5vw] hover:bg-[#6556CD] hover:text-white hover:duration-300 rounded-lg'> <i className="ri-tv-2-line"></i> Popular</Link>
@@ -75,7 +75,7 @@ function Sidenav({ isOpen, setIsOpen }) {
             </nav>
 
             <nav className='web-info flex flex-col h-[10vh] relative gap-[0.2vw] text-[1.3vw] leading-none text-zinc-300'>
-                <h1 className='font-semibold text-[1.6vw] mt-[1vh] text-white'>Website Information</h1>
+                <h1 className='font-semibold text-[1.4vw] mt-[1vh] text-white'>Website Information</h1>
                 <Link to='/contact' className='link p-[0.5vw] hover:bg-[#6556CD] hover:text-white hover:duration-300 rounded-lg'> <i className="ri-phone-line"></i> Contact</Link>
                 <Link to='/about' className='link p-[0.5vw] hover:bg-[#6556CD] hover:text-white hover:duration-300 rounded-lg'> <i className="ri-info-i"></i> About</Link>
             </nav>
