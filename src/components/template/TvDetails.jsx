@@ -21,7 +21,7 @@ function MovieDetails() {
       return ()=>{    // this will run after this particuler page leave
         dispatch(removetv());    
       }
-  },[id], pathname)
+  },[id, pathname])
 
   return info ? (
     <div style={{

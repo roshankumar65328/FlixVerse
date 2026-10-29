@@ -35,7 +35,7 @@ function Topnav() {
         <input 
         onChange={(e)=>{setQuery(e.target.value)}}
         value={query}
-         className='border rounded w-[50%] mx-[1%]  text-[1.6vw]  border-none' type="text" placeholder='search any movie, series, actors...' />
+         className='border rounded w-[50%] mx-[1%]  text-[1.6vw]  border-none' type="text" placeholder='search movie, series, actors...' />
         
         {query.length > 0 && 
         <i 
@@ -45,7 +45,7 @@ function Topnav() {
         <div className='search-result absolute z-[999] w-[50%] max-h-[50vh] bg-zinc-200  top-[100%] overflow-auto rounded'>
 
             {searches && searches.map((s, i)=>{
-            return <Link to={`/${s.media_type}/details/${s.id}`} key={i} className='text-zinc-600 bg-blue-200 w-full i p-[0.8vw] hover:text-black hover:bg-blue-300 duration-500 border-b-2 border-zinc-100 items-center flex items-center gap-x-[5vw]'>
+            return <Link to={`/${s.media_type}/details/${s.id}`} key={i} className='text-zinc-600 bg-blue-200 w-full i p-[0.8vw] hover:text-black hover:bg-blue-300 duration-500 border-b-2 border-zinc-100 flex items-center gap-x-[5vw]'>
                 <img className='w-[10vh] h-[10vh] object-cover rounded'  
                 src={
                     s.backdrop_path || s.profile_path || s.poster_path ?

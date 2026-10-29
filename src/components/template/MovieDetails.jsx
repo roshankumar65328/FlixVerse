@@ -19,9 +19,9 @@ function MovieDetails() {
       return ()=>{    // this will run after this particuler page leave
         dispatch(removemovie());    
       }
-  },[id], pathname)
+  },[id, pathname])
 
-  return info ? (
+  return info?.detail ? (
     <div style={{
       background: `linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5), rgba(0,0,0,0.8)) , url(https://image.tmdb.org/t/p/w500${
         info.detail.backdrop_path

@@ -136,6 +136,16 @@ select::-ms-expand{
     line-height: 6vw;
     margin-top: 2vw;
   }
+  .sidenav.active .mobile-menu-close{
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .sidenav.active .close-sidebar{
+    opacity: 1;
+  }
   
 
   .sidenav-logo-title{

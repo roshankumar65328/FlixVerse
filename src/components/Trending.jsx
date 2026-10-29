@@ -1,4 +1,4 @@
-import React, { use, useEffect, useState } from 'react'
+import React, {useEffect, useState } from 'react'
 import {Link, useNavigate} from 'react-router-dom'
 import Topnav from './template/Topnav';
 import Dropdown from './template/Dropdown';
@@ -42,7 +42,7 @@ function Trending() {
         if(trending.length === 0){
             GetTrending()
         }else{
-            setPage(1);
+            setPage(1);         // jab page pe category ya duration change karenge to trending me kuch pehle se hoga, tab ye else chalega aur pehle wale data ko clear karke page ko bhi 1 pe le ayega, aur shuru se GetTrending ko chala dega
             setTrending([]);
             GetTrending();
         }
@@ -54,7 +54,8 @@ function Trending() {
         refreshHandler();
     },[category, duration]);
 
-  return trending.length > 0  ? (
+  return trending.length > 0  ? (      // First, when the Trending page opens, `trending.length` is empty, so the loader is returned. After that, `useEffect` runs with the initial `category` and `duration` values. The data is then loaded into `trending. The page re-renders, and now `trending.length` has data, so the loader disappears and the data is displayed.
+
     <div className='trending w-screen h-screen '>
         <div className='trending-head w-[90vw] mx-auto h-[10vh] flex items-center'>
             <h1 className='text-[2vw] flex gap-[1vw]'>
