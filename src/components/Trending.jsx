@@ -18,10 +18,18 @@ function Trending() {
 
     const GetTrending = async()=>{
         try{
-            const {data} = await axios.get(`/trending/${category}/${duration}?page=${page}`);
+            const {data} = await axios.get(`/trending/${category}/${duration}?page=${page}`);      // code mein jo ?page=${page} hai, ye URL Query Parameter hai. Iska use API ko extra information dene ke liye hota hai, jaise kaunsa page chahiye, kitne results chahiye, search kya karni hai, etc. URL mein ? ka use query parameters ko shuru karne ke liye hota hai.
+
+            // https://example.com/products → endpoint
+            // ? → query parameters ki shuruaat
+            // page → parameter ka naam
+            // = → parameter aur uski value ko separate karta hai
+            // 2 → parameter ki value
+
+            // ek se zyada query parameters bhejne hain, toh unke beech & use hota hai.   /products?page=2&limit=10
+            
+            
             // setTrending(data.results)
-            
-            
             if(data.results.length > 0){
                 setTrending((prevState)=>[...prevState, ...data.results])
                 setPage(page + 1);
@@ -73,10 +81,10 @@ function Trending() {
 
 
         <InfiniteScroll 
-        dataLength={trending.length }
-        next={GetTrending}
-        hasMore={hasMore}
-        loader={ <h1> Loading... </h1> }>
+        dataLength={trending.length }   // Abhi kitna data available hai?
+        next={GetTrending}   // Naya data load karne ke liye kaunsa function chalana hai?
+        hasMore={hasMore}    // Kya abhi aur data available hai?, agar true hai, Iska matlab hai ki aur data load karne ki koshish ki ja sakti hai.
+        loader={ <h1> Loading... </h1> }>   {/* Data load hote waqt kya dikhana hai? */}
             <Cards data={trending} title={category} />
         </InfiniteScroll>
             
